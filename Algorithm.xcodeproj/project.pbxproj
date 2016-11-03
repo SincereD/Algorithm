@@ -13,6 +13,10 @@
 		C6CDC7631DC9B3D00051201D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6CDC7611DC9B3D00051201D /* Main.storyboard */; };
 		C6CDC7651DC9B3D00051201D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6CDC7641DC9B3D00051201D /* Assets.xcassets */; };
 		C6CDC7681DC9B3D00051201D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6CDC7661DC9B3D00051201D /* LaunchScreen.storyboard */; };
+		C6D4AA891DCB099D001F79E4 /* QuickSort.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D4AA881DCB099D001F79E4 /* QuickSort.m */; };
+		C6D4AA8C1DCB0EE9001F79E4 /* CommonSort.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D4AA8B1DCB0EE9001F79E4 /* CommonSort.m */; };
+		C6D4AA901DCB1C8D001F79E4 /* SortView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D4AA8F1DCB1C8D001F79E4 /* SortView.m */; };
+		C6D4AA971DCB2E61001F79E4 /* HeapSort.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D4AA961DCB2E61001F79E4 /* HeapSort.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,14 @@
 		C6CDC7641DC9B3D00051201D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6CDC7671DC9B3D00051201D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6CDC7691DC9B3D00051201D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6D4AA871DCB099D001F79E4 /* QuickSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickSort.h; sourceTree = "<group>"; };
+		C6D4AA881DCB099D001F79E4 /* QuickSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickSort.m; sourceTree = "<group>"; };
+		C6D4AA8A1DCB0EE9001F79E4 /* CommonSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonSort.h; sourceTree = "<group>"; };
+		C6D4AA8B1DCB0EE9001F79E4 /* CommonSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonSort.m; sourceTree = "<group>"; };
+		C6D4AA8E1DCB1C8D001F79E4 /* SortView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortView.h; sourceTree = "<group>"; };
+		C6D4AA8F1DCB1C8D001F79E4 /* SortView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortView.m; sourceTree = "<group>"; };
+		C6D4AA951DCB2E61001F79E4 /* HeapSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeapSort.h; sourceTree = "<group>"; };
+		C6D4AA961DCB2E61001F79E4 /* HeapSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeapSort.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,9 @@
 			children = (
 				C6CDC75B1DC9B3D00051201D /* AppDelegate.h */,
 				C6CDC75C1DC9B3D00051201D /* AppDelegate.m */,
+				C6D4AA8D1DCB0F42001F79E4 /* BaseAPI */,
+				C6D4AA941DCB2E4B001F79E4 /* HeapSort */,
+				C6D4AA831DCB0904001F79E4 /* QuickSort */,
 				C6CDC75E1DC9B3D00051201D /* ViewController.h */,
 				C6CDC75F1DC9B3D00051201D /* ViewController.m */,
 				C6CDC7611DC9B3D00051201D /* Main.storyboard */,
@@ -77,6 +92,35 @@
 				C6CDC7591DC9B3D00051201D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C6D4AA831DCB0904001F79E4 /* QuickSort */ = {
+			isa = PBXGroup;
+			children = (
+				C6D4AA871DCB099D001F79E4 /* QuickSort.h */,
+				C6D4AA881DCB099D001F79E4 /* QuickSort.m */,
+			);
+			name = QuickSort;
+			sourceTree = "<group>";
+		};
+		C6D4AA8D1DCB0F42001F79E4 /* BaseAPI */ = {
+			isa = PBXGroup;
+			children = (
+				C6D4AA8A1DCB0EE9001F79E4 /* CommonSort.h */,
+				C6D4AA8B1DCB0EE9001F79E4 /* CommonSort.m */,
+				C6D4AA8E1DCB1C8D001F79E4 /* SortView.h */,
+				C6D4AA8F1DCB1C8D001F79E4 /* SortView.m */,
+			);
+			name = BaseAPI;
+			sourceTree = "<group>";
+		};
+		C6D4AA941DCB2E4B001F79E4 /* HeapSort */ = {
+			isa = PBXGroup;
+			children = (
+				C6D4AA951DCB2E61001F79E4 /* HeapSort.h */,
+				C6D4AA961DCB2E61001F79E4 /* HeapSort.m */,
+			);
+			name = HeapSort;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +195,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6D4AA971DCB2E61001F79E4 /* HeapSort.m in Sources */,
 				C6CDC7601DC9B3D00051201D /* ViewController.m in Sources */,
 				C6CDC75D1DC9B3D00051201D /* AppDelegate.m in Sources */,
 				C6CDC75A1DC9B3D00051201D /* main.m in Sources */,
+				C6D4AA8C1DCB0EE9001F79E4 /* CommonSort.m in Sources */,
+				C6D4AA901DCB1C8D001F79E4 /* SortView.m in Sources */,
+				C6D4AA891DCB099D001F79E4 /* QuickSort.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +360,7 @@
 				C6CDC76E1DC9B3D00051201D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

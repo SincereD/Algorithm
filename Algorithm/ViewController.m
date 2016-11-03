@@ -8,6 +8,12 @@
 
 #import "ViewController.h"
 
+#import "QuickSort.h"
+
+#import "HeapSort.h"
+
+#import "SortView.h"
+
 @interface ViewController (){
     
     NSMutableArray * _numberArr;
@@ -20,13 +26,14 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     _numberArr = [NSMutableArray arrayWithCapacity:10];
     
     for (int i = 0; i<10; i++) {
         
-        CGFloat number = arc4random()%100;
+        CGFloat number = arc4random()%100 + 10;
         
         NSNumber * numberObj = [NSNumber numberWithFloat:number];
         
@@ -42,63 +49,31 @@
     
     NSLog(@"%@",_numberArr);
     
-    [self fastIndexI:i indexJ:j];
+    SortView * sortView = [[SortView alloc] initWithArray:_numberArr];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-      
-        NSLog(@"=== 排序后 ===");
-        
-        NSLog(@"%@",_numberArr);
-        
-    });
-}
+    [self.view addSubview:sortView];
+    
+    [sortView setCenter:self.view.center];
 
-
-/**
- 快速排序
-
- @param i I
- @param j J
- */
-- (void)fastIndexI:(NSInteger)i indexJ:(NSInteger)j{
+//    HeapSort * quickSort = [[HeapSort alloc] init];
     
-    NSInteger left = i;
     
-    NSInteger right = j;
+    QuickSort * quickSort = [[QuickSort alloc] init];
+//
+    [quickSort quickSortDataSource:_numberArr left:i right:j];
     
-    if (i >= j) {
-
-        return;
-    }
+//    [quickSort heapSort:_numberArr];
     
-    key = [_numberArr[i] floatValue];
     
-    while (i < j) {
-        
-        while (i < j && key <= [_numberArr[j] floatValue])
-        {
-            
-            j --;
-
-        }
-        
-        [_numberArr exchangeObjectAtIndex:i withObjectAtIndex:j];
+    [sortView starAnimationWithArray:quickSort.sortRecord];
     
-        while (i < j && key >= [_numberArr[i] floatValue]) {
-            
-            i ++;
-        
-        }
-        
-        [_numberArr exchangeObjectAtIndex:i withObjectAtIndex:j];
-        
-    }
+    NSLog(@"=== 排序后 ===");
     
-    key = [_numberArr[i] floatValue];
+    NSLog(@"%@",_numberArr);
     
-    [self fastIndexI:left indexJ:i-1];
+    NSLog(@"=== 执行换位次数：%d ===",(int)quickSort.sortRecord.count );
     
-    [self fastIndexI:i+1 indexJ:right];
+    NSLog(@"%@",quickSort.sortRecord);
     
 }
 
